@@ -33,7 +33,7 @@ shift = 0
 @bot.group(invoke_without_command=True)
 async def ajuda(ctx):
   em = discord.Embed(title="Ajuda", description="Use $ajuda <comando> para mais informações sobre o comando.", color=discord.Colour.magenta())
-  em.add_field(name = "Diversão", value="falar, frase, rick, rolagem", inline=False)
+  em.add_field(name = "Diversão", value="chucknorris, falar, frase, rick, rolagem", inline=False)
   em.add_field(name = "Miscelânea", value="oi", inline=False)
   em.add_field(name = "Mensagens", value="boasvindas, mensagem", inline=False)
   await ctx.send(embed = em)
@@ -63,6 +63,12 @@ async def boasvindas(ctx, *args):
       em = discord.Embed(title="Remover (boasvindas)", description="Remove uma mensagem de boas-vindas do banco de dados.", color=discord.Colour.purple())
       em.add_field(name="**Sintaxe**", value="$boasvindas remover <índice da mensagem>", inline=False)
       await ctx.send(embed = em)
+
+@ajuda.command()
+async def chucknorris(ctx):
+  em = discord.Embed(title="Chuck Norris", description="Responde com uma piada sobre o Chuck Norris.", color=discord.Colour.purple())
+  em.add_field(name="**Sintaxe**", value="$chucknorris", inline=False)
+  await ctx.send(embed = em)
 
 @ajuda.command()
 async def falar(ctx):
