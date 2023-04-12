@@ -14,7 +14,8 @@ bot.remove_command("help")
 
 webrole = ["webrole", "webrolê", "web role", "web rolê"]
 starter_sentences = ["Webrolê? Aoba!"]
-welcome_messages = ["Olá {0}! Seja muito bem-vinde ao **{1}**! Aqui temos bastante depressão, álcool, sexo, drogas e suco de laranja!", "Opa minhe jovem {0}, tranquilo? Seja muito bem-vinde ao **{1}**! O cardápio de hoje é de torradas com creme de ansiedade para a entrada, tartare de peixe ao molho de depressão e, para fechar, uma barra de diamante negro na sobremesa! Nada melhor que chocolate com cacos de vidro!", "Salve salve {0}! Bem-vinde ao **{1}**! Sinta-se em casa, afinal, é pra você estar mesmo CACETE NOIS TAMO NO MEIO DE UMA PANDEMIA.", "Carai não guento mais escrever \"Bem-vinde ao **{1}**! Cacos de vidro depressão e Pererê pão doce\"\n{0} Só cola aí caralho\nCuidado com os membros do proletariado. Eles não mordem mas latem que é uma beleza!"]
+
+welcome_messages = [os.environ["message1"], os.environ["message2"], os.environ["message3"], os.environ["message4"]]
 
 if "responding" not in db.keys():
   db["responding"] = True
